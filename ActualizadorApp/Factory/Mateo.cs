@@ -13,9 +13,7 @@ namespace ActualizadorApp.Factory
 
         public override void EjecutaInstalacion()
         {
-            obtenerDatosAppBD((int)tipoApp.Scales);
-
-            var _aplicacion = aplicacion.directorio + aplicacion.ejecutable;
+            obtenerDatosAppBD((int)tipoApp.Mateo);
 
             try
             {
@@ -72,6 +70,7 @@ namespace ActualizadorApp.Factory
             //psi.Arguments = "/c \"first.exe -a -b -c | second.exe\"";
             p.StartInfo = psi;
             p.Start();
+            p.WaitForExit(1000);
         }
 
         private void killAplicacion()

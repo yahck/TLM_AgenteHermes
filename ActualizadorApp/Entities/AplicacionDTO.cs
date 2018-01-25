@@ -13,6 +13,7 @@ namespace ActualizadorApp.Entities
         public string listaPC { get; set; }
         public string ruta_instalador { get; set; }
         public string actualiza { get; set; }
-        
+        static string[] val = null;
+
     }
 }

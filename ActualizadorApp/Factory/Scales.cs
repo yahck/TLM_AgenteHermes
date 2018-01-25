@@ -15,8 +15,6 @@ namespace ActualizadorApp.Factory
         {
             obtenerDatosAppBD((int)tipoApp.Scales);
 
-            var _aplicacion = aplicacion.directorio + aplicacion.ejecutable;
-
             try
             {
                 if (validaPCdesplegar() && aplicacion.actualiza == "1")

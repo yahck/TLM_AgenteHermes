@@ -1,7 +1,6 @@
-﻿using MongoDB.Bson;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using ActualizadorApp.Entities;
-using System.Collections.Generic;
+using System.Configuration;
 
 namespace ActualizadorApp.DataAccess
 {
@@ -11,7 +10,7 @@ namespace ActualizadorApp.DataAccess
         {
             try
             {
-                var connectionString = "mongodb://localhost:27017";
+                var connectionString = ConfigurationManager.AppSettings["CxMongoDB"];
                 var cliente = new MongoClient(connectionString);
                 var bd = cliente.GetDatabase("local");
 
