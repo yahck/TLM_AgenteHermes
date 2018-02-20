@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Talma.Procesa.WebAduana.DataAccess;
 
 namespace Talma.Procesa.WebAduana
 {
@@ -24,13 +17,10 @@ namespace Talma.Procesa.WebAduana
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<ManiProvi> listaMani = new List<ManiProvi>();
-
+            List<ManifiestoProvisional> listaMani = new List<ManifiestoProvisional>();
+            
             try
             {
-                //HtmlDocument document = this.webBrowserAduana.Document;
-                //oHtml = document.Body.InnerHtml;
-
                 int i = 0;
 
                 HtmlElementCollection elements = webBrowserAduana.Document.GetElementsByTagName("TR");
@@ -38,7 +28,7 @@ namespace Talma.Procesa.WebAduana
                 {
                     if (i > 4)
                     {
-                        ManiProvi mani = new ManiProvi();
+                        ManifiestoProvisional mani = new ManifiestoProvisional();
 
                         int j = 0;
 
@@ -77,8 +67,10 @@ namespace Talma.Procesa.WebAduana
                     i++;
                    
                 }
-             
-                //new SCALES_WCF.SCALES_WCFClient().UpdateValidaDua(list);
+
+                Mongodb.insertar(listaMani);
+
+                MessageBox.Show("Se proceso correctamente");
             }
             catch (Exception ex)
             {
@@ -88,6 +80,7 @@ namespace Talma.Procesa.WebAduana
 
         private void button2_Click(object sender, EventArgs e)
         {
+        //F:\RepositoriosGit\AgenteHermesScales\Talma.Procesa.WebAduana\bin\Debug\InfoManifiestoProvisional
             var pathPage = Directory.GetCurrentDirectory() + "\\" + InfoManifiestoProvisional + "\\pagManifiestoProv.html";
             webBrowserAduana.Navigate(pathPage);
             //webBrowserAduana.Refresh();
@@ -95,13 +88,6 @@ namespace Talma.Procesa.WebAduana
         }
     }
 
-    public class ManiProvi
-    {
-        public string Manifiesto { get; set; }
-        public string FechaLlegada { get; set; }
-        public string FechaTransmision { get; set; }
-        public string Aerolinea { get; set; }
-        public string Vuelo { get; set; }
-    }
+    
 
 }
