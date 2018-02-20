@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talma.Conexion", "Talma.Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talma.Entidades", "Talma.Entidades\Talma.Entidades.csproj", "{09904EE5-9A46-4A1A-BC48-BECB6197644F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talma.Container.WebAduana", "Talma.Container.WebAduana\Talma.Container.WebAduana.csproj", "{967F9D7C-D8AC-4DBF-B276-258C908F66E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talma.Procesa.WebAduana", "Talma.Procesa.WebAduana\Talma.Procesa.WebAduana.csproj", "{ADBCF364-6870-4780-9283-DD66236B7C47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{09904EE5-9A46-4A1A-BC48-BECB6197644F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09904EE5-9A46-4A1A-BC48-BECB6197644F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09904EE5-9A46-4A1A-BC48-BECB6197644F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967F9D7C-D8AC-4DBF-B276-258C908F66E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967F9D7C-D8AC-4DBF-B276-258C908F66E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967F9D7C-D8AC-4DBF-B276-258C908F66E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967F9D7C-D8AC-4DBF-B276-258C908F66E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBCF364-6870-4780-9283-DD66236B7C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBCF364-6870-4780-9283-DD66236B7C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBCF364-6870-4780-9283-DD66236B7C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBCF364-6870-4780-9283-DD66236B7C47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
